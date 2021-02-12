@@ -51,7 +51,7 @@ function Dots({ duration, ...props }) {
   return (
     <instancedMesh args={[null, null, 10000]} ref={ref} {...props}>
       <circleBufferGeometry args={[0.15, 8]} />
-      <meshBasicMaterial color={'white'} />
+      <meshBasicMaterial color={'#aaaaaa'} />
     </instancedMesh>
   )
 }
