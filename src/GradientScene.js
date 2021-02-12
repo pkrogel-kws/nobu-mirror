@@ -66,7 +66,7 @@ function Dolly() {
 export default function App() {
   return (
     <Canvas perspective camera={{ position: [0, 0, 5] }}>
-      <color attach="background" args={['#080b11']} />
+      <color attach="background" args={['#000']} />
       {/* <Gradients duration={3.8} /> */}
       <Stars
         radius={100} // Radius of the inner sphere (default=100)

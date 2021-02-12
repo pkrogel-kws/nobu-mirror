@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Tutorials/Mirrors/static/css/main.6da25737.css",
-    "main.js": "/Tutorials/Mirrors/static/js/main.f7e9087f.js",
-    "main.js.map": "/Tutorials/Mirrors/static/js/main.f7e9087f.js.map",
+    "main.css": "/Tutorials/Mirrors/static/css/main.030a568b.css",
+    "main.js": "/Tutorials/Mirrors/static/js/main.dfb57968.js",
+    "main.js.map": "/Tutorials/Mirrors/static/js/main.dfb57968.js.map",
     "index.html": "/Tutorials/Mirrors/index.html",
-    "precache-manifest.2deff63609e620fc44291878b33047f1.js": "/Tutorials/Mirrors/precache-manifest.2deff63609e620fc44291878b33047f1.js",
+    "precache-manifest.85243ac979c2b7c5a01a5e9e212c84d3.js": "/Tutorials/Mirrors/precache-manifest.85243ac979c2b7c5a01a5e9e212c84d3.js",
     "service-worker.js": "/Tutorials/Mirrors/service-worker.js",
-    "static/css/main.6da25737.css.map": "/Tutorials/Mirrors/static/css/main.6da25737.css.map",
-    "static/js/main.f7e9087f.js.LICENSE.txt": "/Tutorials/Mirrors/static/js/main.f7e9087f.js.LICENSE.txt"
+    "static/css/main.030a568b.css.map": "/Tutorials/Mirrors/static/css/main.030a568b.css.map",
+    "static/js/main.dfb57968.js.LICENSE.txt": "/Tutorials/Mirrors/static/js/main.dfb57968.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/css/main.6da25737.css",
-    "static/js/main.f7e9087f.js"
+    "static/css/main.030a568b.css",
+    "static/js/main.dfb57968.js"
   ]
 }
