@@ -9,7 +9,7 @@ import Scene1 from './Scene1'
 // import Scene2 from './Scene2'
 // import Scene3 from './Scene3'
 import DotsScene from './DotsScene'
-
+import GradientScene from './GradientScene'
 import './base.css'
 
 function Loader() {
@@ -93,6 +93,7 @@ function Body() {
 
         {path === '' && <App scene={1} />}
         {path === 'music' && <DotsScene />}
+        {path === 'contact' && <GradientScene />}
 
         {/* <DotsScene /> */}
       </div>

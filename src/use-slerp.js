@@ -2,7 +2,8 @@ import { useMemo, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame, useThree } from 'react-three-fiber'
 
-function useSlerp() {
+function useSlerp(params = {}) {
+  const { scalarX = 100, scalarY = 100 } = params
   const group = useRef()
   const { viewport } = useThree()
 
@@ -14,8 +15,8 @@ function useSlerp() {
   useFrame(({ mouse }) => {
     if (!group.current) return
 
-    const x = (mouse.x * viewport.width) / 100
-    const y = (mouse.y * viewport.height) / 100
+    const x = (mouse.x * viewport.width) / scalarX
+    const y = (mouse.y * viewport.height) / scalarY
     rotationEuler.set(y, x, 0)
     rotationQuaternion.setFromEuler(rotationEuler)
     group.current.quaternion.slerp(rotationQuaternion, 0.1)

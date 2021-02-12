@@ -1,12 +1,42 @@
-import React, { useLayoutEffect, useMemo, useRef } from 'react'
+import React, { useLayoutEffect, useMemo, useRef, useEffect } from 'react'
 import { Canvas, useFrame } from 'react-three-fiber'
 import { Effects } from './DotEffects'
+import useLayers from './use-layers'
+import useSlerp from './use-slerp'
+import { Text, Box, useMatcapTexture, Octahedron } from '@react-three/drei'
+
 import * as THREE from 'three'
 // import './styles.css'
-
+const TEXT_PROPS = {
+  fontSize: 4.2,
+  font: 'https://fonts.gstatic.com/s/syncopate/v12/pe0pMIuPIYBCpEV5eFdKvtKqBP5p.woff'
+}
 // Inspired by:
 // https://twitter.com/beesandbombs/status/1329796242298245124
+function Title({ layers, ...props }) {
+  //   const group = useRef()
+  const group = useSlerp({ scalarX: 400, scalarY: 400 })
 
+  useEffect(() => {
+    group.current.lookAt(0, 0, 0)
+  }, [])
+
+  const textRef = useLayers(layers)
+
+  return (
+    <group {...props} ref={group}>
+      <Text
+        ref={textRef}
+        name="text-panna"
+        depthTest={false}
+        material-toneMapped={false}
+        material-color="#FFFFFF"
+        {...TEXT_PROPS}>
+        Nobu FM
+      </Text>
+    </group>
+  )
+}
 const roundedSquareWave = (t, delta = 0.1, a = 1, f = 1 / 10) => {
   // Equation from https://dsp.stackexchange.com/a/56529
   // Visualized here https://www.desmos.com/calculator/uakymahh4u
@@ -51,7 +81,8 @@ function Dots({ duration, ...props }) {
   return (
     <instancedMesh args={[null, null, 10000]} ref={ref} {...props}>
       <circleBufferGeometry args={[0.15, 8]} />
-      <meshBasicMaterial color={'#aaaaaa'} />
+      {/* <meshBasicMaterial color={'#555555'} /> */}
+      <meshBasicMaterial color={'#FDFF79'} />
     </instancedMesh>
   )
 }
@@ -59,8 +90,10 @@ function Dots({ duration, ...props }) {
 export default function App() {
   return (
     <Canvas orthographic colorManagement={false} camera={{ position: [0, 0, 100], zoom: 20 }}>
-      <color attach="background" args={['black']} />
+      <color attach="background" args={['#080b11']} />
       <Dots duration={3.8} />
+      <Title name="title" position={[0, 0, 2]} />
+
       <Effects />
     </Canvas>
   )
