@@ -11,7 +11,7 @@ import { ThinFilmFresnelMap } from './ThinFilmFresnelMap'
 import { mirrorsData } from './data'
 
 const TEXT_PROPS = {
-  fontSize: 2.5,
+  fontSize: 2.2,
   font: 'https://fonts.gstatic.com/s/syncopate/v12/pe0pMIuPIYBCpEV5eFdKvtKqBP5p.woff'
 }
 
@@ -25,8 +25,14 @@ function Title({ layers, ...props }) {
 
   return (
     <group {...props} ref={group}>
-      <Text ref={textRef} name="text-panna" depthTest={false} material-toneMapped={false} material-color="#FFFFFF" {...TEXT_PROPS}>
-        PANNA
+      <Text
+        ref={textRef}
+        name="text-panna"
+        depthTest={false}
+        material-toneMapped={false}
+        material-color="#FFFFFF"
+        {...TEXT_PROPS}>
+        Nobu Tech
       </Text>
     </group>
   )

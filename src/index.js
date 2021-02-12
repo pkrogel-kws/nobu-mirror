@@ -2,13 +2,13 @@ import { render } from 'react-dom'
 import React, { Suspense } from 'react'
 import { Canvas } from 'react-three-fiber'
 import { useProgress, Html } from '@react-three/drei'
-import { HashRouter as Router, Switch, Route, NavLink, Redirect } from 'react-router-dom'
+// import { HashRouter as Router, Switch, Route, NavLink, Redirect } from 'react-router-dom'
 
 import Scene1 from './Scene1'
-import Scene2 from './Scene2'
-import Scene3 from './Scene3'
+// import Scene2 from './Scene2'
+// import Scene3 from './Scene3'
 
-import "./base.css"
+import './base.css'
 
 function Loader() {
   const { progress } = useProgress()
@@ -26,8 +26,8 @@ function App(props) {
       <color attach="background" args={['#000']} />
       <Suspense fallback={<Loader />}>
         {scene === 1 && <Scene1 />}
-        {scene === 2 && <Scene2 />}
-        {scene === 3 && <Scene3 />}
+        {/* {scene === 2 && <Scene2 />}
+        {scene === 3 && <Scene3 />} */}
       </Suspense>
       <ambientLight intensity={0.4} />
     </Canvas>
@@ -36,32 +36,33 @@ function App(props) {
 
 function Body() {
   return (
-    <Router>
-      <main>
-        <div className="frame">
-          <div className="frame__title-wrap">
-            <h1 className="frame__title">Awesome Mirror Effect</h1>
-            <p className="frame__tagline">A react-three-fiber based demo</p>
-          </div>
-          <div className="frame__links">
-            <a href="https://tympanus.net/Development/MenuFullGrid/">Previous demo</a>
-            <a href="https://tympanus.net/codrops/?p=51167">Article</a>
-            <a href="https://github.com/emmelleppi/codrops-r3f-mirrors">GitHub</a>
-          </div>
-          <div className="frame__demos">
-            <NavLink to="/panna" activeClassName="frame__demo--current" className="frame__demo">
-              PANNA
-            </NavLink>
-            <NavLink to="/olga" activeClassName="frame__demo--current" className="frame__demo">
-              OLGA
-            </NavLink>
-            <NavLink to="/pedro" activeClassName="frame__demo--current" className="frame__demo">
-              PEDRO
-            </NavLink>
-          </div>
+    // <Router>
+    <main>
+      {/* <div className="frame">
+        <div className="frame__title-wrap">
+          <h1 className="frame__title">Awesome Mirror Effect</h1>
+          <p className="frame__tagline">A react-three-fiber based demo</p>
         </div>
-        <div className="content">
-          <Switch>
+        <div className="frame__links">
+          <a href="https://tympanus.net/Development/MenuFullGrid/">Previous demo</a>
+          <a href="https://tympanus.net/codrops/?p=51167">Article</a>
+          <a href="https://github.com/emmelleppi/codrops-r3f-mirrors">GitHub</a>
+        </div>
+        <div className="frame__demos">
+          <NavLink to="/panna" activeClassName="frame__demo--current" className="frame__demo">
+            PANNA
+          </NavLink>
+          <NavLink to="/olga" activeClassName="frame__demo--current" className="frame__demo">
+            OLGA
+          </NavLink>
+          <NavLink to="/pedro" activeClassName="frame__demo--current" className="frame__demo">
+            PEDRO
+          </NavLink>
+        </div>
+      </div> */}
+      <div className="content">
+        <App scene={1} />
+        {/* <Switch>
             <Route exact path="/">
               <Redirect to="/panna" />
             </Route>
@@ -74,10 +75,10 @@ function Body() {
             <Route exact path="/pedro">
               <App scene={3} />
             </Route>
-          </Switch>
-        </div>
-      </main>
-    </Router>
+          </Switch> */}
+      </div>
+    </main>
+    // </Router>
   )
 }
 
