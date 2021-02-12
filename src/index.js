@@ -38,7 +38,11 @@ function App(props) {
 }
 
 function Body() {
-  // const [path] = usePath()
+  const [path, setPath] = usePath()
+  window.__UPDATE_ROUTE = (route) => {
+    console.log('window.__UPDATE_ROUTE', route)
+    setPath(route)
+  }
   // console.log(path, 'p')
   return (
     <Router>
