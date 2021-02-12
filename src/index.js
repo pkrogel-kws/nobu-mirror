@@ -64,24 +64,10 @@ function Body() {
   // console.log(path, 'p')
   return (
     // <Router>
-    <main>
-      {/* <div className="frame">
 
-        <div className="frame__demos">
-          <NavLink to="/panna" activeClassName="frame__demo--current" className="frame__demo">
-            PANNA
-          </NavLink>
-          <NavLink to="/olga" activeClassName="frame__demo--current" className="frame__demo">
-            OLGA
-          </NavLink>
-          <NavLink to="/pedro" activeClassName="frame__demo--current" className="frame__demo">
-            PEDRO
-          </NavLink>
-        </div>
-      </div> */}
-      <div className="content">
-        {/* <App scene={path} /> */}
-        {/* <Switch>
+    <div className="content">
+      {/* <App scene={path} /> */}
+      {/* <Switch>
             <Route exact path="/">
               <App scene={1} />
             </Route>
@@ -91,13 +77,12 @@ function Body() {
             </Route>
           </Switch> */}
 
-        {path === '' && <App scene={1} />}
-        {path === 'music' && <DotsScene />}
-        {path === 'contact' && <GradientScene />}
+      {path === '' && <App scene={1} />}
+      {path === 'music' && <DotsScene />}
+      {path === 'contact' && <GradientScene />}
 
-        {/* <DotsScene /> */}
-      </div>
-    </main>
+      {/* <DotsScene /> */}
+    </div>
     // </Router>
   )
 }
