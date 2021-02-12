@@ -1,22 +1,16 @@
 {
   "files": {
-    "main.css": "/Tutorials/Mirrors/static/css/main.3e0da3ba.chunk.css",
-    "main.js": "/Tutorials/Mirrors/static/js/main.afe5ae61.chunk.js",
-    "main.js.map": "/Tutorials/Mirrors/static/js/main.afe5ae61.chunk.js.map",
-    "runtime-main.js": "/Tutorials/Mirrors/static/js/runtime-main.3f5545e1.js",
-    "runtime-main.js.map": "/Tutorials/Mirrors/static/js/runtime-main.3f5545e1.js.map",
-    "static/js/2.9816361c.chunk.js": "/Tutorials/Mirrors/static/js/2.9816361c.chunk.js",
-    "static/js/2.9816361c.chunk.js.map": "/Tutorials/Mirrors/static/js/2.9816361c.chunk.js.map",
+    "main.css": "/Tutorials/Mirrors/static/css/main.css",
+    "main.js": "/Tutorials/Mirrors/static/js/main.js",
+    "main.js.map": "/Tutorials/Mirrors/static/js/main.js.map",
     "index.html": "/Tutorials/Mirrors/index.html",
-    "precache-manifest.07a8d4d6b71fb407e8b4659972226464.js": "/Tutorials/Mirrors/precache-manifest.07a8d4d6b71fb407e8b4659972226464.js",
+    "precache-manifest.4f2f32f18f95328c712c31707ca9c5dd.js": "/Tutorials/Mirrors/precache-manifest.4f2f32f18f95328c712c31707ca9c5dd.js",
     "service-worker.js": "/Tutorials/Mirrors/service-worker.js",
-    "static/css/main.3e0da3ba.chunk.css.map": "/Tutorials/Mirrors/static/css/main.3e0da3ba.chunk.css.map",
-    "static/js/2.9816361c.chunk.js.LICENSE.txt": "/Tutorials/Mirrors/static/js/2.9816361c.chunk.js.LICENSE.txt"
+    "static/css/main.css.map": "/Tutorials/Mirrors/static/css/main.css.map",
+    "static/js/main.js.LICENSE.txt": "/Tutorials/Mirrors/static/js/main.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.3f5545e1.js",
-    "static/js/2.9816361c.chunk.js",
-    "static/css/main.3e0da3ba.chunk.css",
-    "static/js/main.afe5ae61.chunk.js"
+    "static/css/main.css",
+    "static/js/main.js"
   ]
 }

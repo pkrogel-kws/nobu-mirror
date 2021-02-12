@@ -23,8 +23,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build-non-split": "node ./scripts/build-non-split.js",
+    "build-split": "react-scripts build",
+    "build": "node ./scripts/build-non-split.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "pretty": "prettier --write src"
