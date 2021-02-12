@@ -16,6 +16,11 @@ const usePath = () => {
   }
 
   React.useEffect(() => {
+    window.__UPDATE_ROUTE = (route) => {
+      console.log('window.__UPDATE_ROUTE', route)
+      setPath(route)
+    }
+
     window.onpopstate = () => {
       setPath(window.location.pathname.substr(1))
     }
