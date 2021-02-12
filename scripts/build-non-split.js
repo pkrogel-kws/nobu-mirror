@@ -10,9 +10,9 @@ config.optimization.splitChunks = {
 
 config.optimization.runtimeChunk = false
 
-// // Renames main.00455bcf.js to main.js
-// config.output.filename = 'static/js/[name].js'
+// Renames main.00455bcf.js to main.js
+config.output.filename = 'static/js/[name].js'
 
-// // Renames main.b100e6da.css to main.css
-// config.plugins[5].options.filename = 'static/css/[name].css'
-// config.plugins[5].options.moduleFilename = () => 'static/css/main.css'
+// Renames main.b100e6da.css to main.css
+config.plugins[5].options.filename = 'static/css/[name].css'
+config.plugins[5].options.moduleFilename = () => 'static/css/main.css'
