@@ -90,7 +90,7 @@ function TitleCopies({ layers }) {
   return (
     <group name="titleCopies">
       {vertices.map((vertex, i) => (
-        <Title name={'titleCopy-' + i} position={vertex} layers={layers} />
+        <Title name={'titleCopy-' + i} key={'titleCopy-' + i} position={vertex} layers={layers} />
       ))}
     </group>
   )
