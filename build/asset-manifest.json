@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Tutorials/Mirrors/static/css/main.3e0da3ba.css",
+    "main.js": "/Tutorials/Mirrors/static/js/main.45ee47bd.js",
+    "main.js.map": "/Tutorials/Mirrors/static/js/main.45ee47bd.js.map",
+    "index.html": "/Tutorials/Mirrors/index.html",
+    "precache-manifest.98ea31eccde07350052f8d9dd08cb1c5.js": "/Tutorials/Mirrors/precache-manifest.98ea31eccde07350052f8d9dd08cb1c5.js",
+    "service-worker.js": "/Tutorials/Mirrors/service-worker.js",
+    "static/css/main.3e0da3ba.css.map": "/Tutorials/Mirrors/static/css/main.3e0da3ba.css.map",
+    "static/js/main.45ee47bd.js.LICENSE.txt": "/Tutorials/Mirrors/static/js/main.45ee47bd.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/css/main.3e0da3ba.css",
+    "static/js/main.45ee47bd.js"
+  ]
+}
