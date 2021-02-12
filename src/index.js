@@ -1,6 +1,6 @@
 import { render } from 'react-dom'
-import React, { Suspense } from 'react'
-import { Canvas } from 'react-three-fiber'
+import React, { Suspense, useRef, useEffect } from 'react'
+import { Canvas, useFrame, useThree } from 'react-three-fiber'
 import { useProgress, Html } from '@react-three/drei'
 import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from 'react-router-dom'
 import usePath from './usePath'
@@ -20,14 +20,35 @@ function Loader() {
     </Html>
   )
 }
+const ROUTE_CANVAS_PROPS = {
+  '': { concurrent: true, shadowMap: true, camera: { position: [0, 0, 5], fov: 70 } },
+  music: { orthographic: true, colorManagement: false, camera: { position: [0, 0, 100], zoom: 20 } }
+}
+
+function Camera(props) {
+  const ref = useRef()
+  const { setDefaultCamera } = useThree()
+  useEffect(() => void setDefaultCamera(ref.current), [])
+  useFrame(() => ref.current.updateMatrixWorld())
+  return <perspectiveCamera ref={ref} {...props} />
+}
 
 function App(props) {
   const { scene = 1 } = props
+  const canvasProps = ROUTE_CANVAS_PROPS[scene]
+  console.log('canvasProps', canvasProps)
+
   return (
     <Canvas concurrent shadowMap camera={{ position: [0, 0, 5], fov: 70 }}>
       <color attach="background" args={['#000']} />
       <Suspense fallback={<Loader />}>
+        {/* <Camera position={[0, 0, 10]} /> */}
+        {/* <Camera {...ROUTE_CANVAS_PROPS[scene].camera} /> */}
+        {/* <CameraUpdater scene={scene} /> */}
         {scene === 1 && <Scene1 />}
+
+        {/* {scene === '' && <Scene1 />} */}
+        {/* {scene === 'music' && <DotsScene />} */}
         {/* {scene === 2 && <Scene2 />}
         {scene === 3 && <Scene3 />} */}
         {/* {scene === 'dots' && <DotsScene />} */}
@@ -59,7 +80,7 @@ function Body() {
         </div>
       </div> */}
       <div className="content">
-        {/* <App scene={1} /> */}
+        {/* <App scene={path} /> */}
         {/* <Switch>
             <Route exact path="/">
               <App scene={1} />
