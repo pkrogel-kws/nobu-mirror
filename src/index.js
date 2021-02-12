@@ -38,12 +38,12 @@ function App(props) {
 }
 
 function Body() {
-  const [path] = usePath()
-  console.log(path, 'p')
+  // const [path] = usePath()
+  // console.log(path, 'p')
   return (
-    // <Router>
-    <main>
-      {/* <div className="frame">
+    <Router>
+      <main>
+        {/* <div className="frame">
 
         <div className="frame__demos">
           <NavLink to="/panna" activeClassName="frame__demo--current" className="frame__demo">
@@ -57,9 +57,9 @@ function Body() {
           </NavLink>
         </div>
       </div> */}
-      <div className="content">
-        {/* <App scene={1} /> */}
-        {/* <Switch>
+        <div className="content">
+          {/* <App scene={1} /> */}
+          <Switch>
             <Route exact path="/">
               <App scene={1} />
             </Route>
@@ -67,15 +67,15 @@ function Body() {
             <Route exact path="/music">
               <DotsScene />
             </Route>
-          </Switch> */}
+          </Switch>
 
-        {path === '' && <App scene={1} />}
-        {path === 'music' && <DotsScene />}
+          {/* {path === '' && <App scene={1} />}
+        {path === 'music' && <DotsScene />} */}
 
-        {/* <DotsScene /> */}
-      </div>
-    </main>
-    // </Router>
+          {/* <DotsScene /> */}
+        </div>
+      </main>
+    </Router>
   )
 }
 

@@ -9,8 +9,5 @@
     "static/css/main.css.map": "/Tutorials/Mirrors/static/css/main.css.map",
     "static/js/main.js.LICENSE.txt": "/Tutorials/Mirrors/static/js/main.js.LICENSE.txt"
   },
-  "entrypoints": [
-    "static/css/main.css",
-    "static/js/main.js"
-  ]
+  "entrypoints": ["static/css/main.css", "static/js/main.js"]
 }
