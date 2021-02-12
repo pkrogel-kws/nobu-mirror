@@ -3,6 +3,7 @@ import React, { Suspense } from 'react'
 import { Canvas } from 'react-three-fiber'
 import { useProgress, Html } from '@react-three/drei'
 import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from 'react-router-dom'
+import usePath from './usePath'
 
 import Scene1 from './Scene1'
 // import Scene2 from './Scene2'
@@ -37,10 +38,12 @@ function App(props) {
 }
 
 function Body() {
+  const [path] = usePath()
+  console.log(path, 'p')
   return (
-    <Router>
-      <main>
-        {/* <div className="frame">
+    // <Router>
+    <main>
+      {/* <div className="frame">
 
         <div className="frame__demos">
           <NavLink to="/panna" activeClassName="frame__demo--current" className="frame__demo">
@@ -54,31 +57,25 @@ function Body() {
           </NavLink>
         </div>
       </div> */}
-        <div className="content">
-          {/* <App scene={1} /> */}
-          <Switch>
+      <div className="content">
+        {/* <App scene={1} /> */}
+        {/* <Switch>
             <Route exact path="/">
-              {/* <Redirect to="/panna" /> */}
               <App scene={1} />
             </Route>
-            {/* <Route exact path="/panna">
-              <App scene={1} />
-            </Route> */}
-            {/* <Route exact path="/olga">
-              <App scene={2} />
-            </Route>
-            <Route exact path="/pedro">
-              <App scene={3} /> */}
-            {/* </Route> */}
+
             <Route exact path="/music">
               <DotsScene />
             </Route>
-          </Switch>
+          </Switch> */}
 
-          {/* <DotsScene /> */}
-        </div>
-      </main>
-    </Router>
+        {path === '' && <App scene={1} />}
+        {path === 'music' && <DotsScene />}
+
+        {/* <DotsScene /> */}
+      </div>
+    </main>
+    // </Router>
   )
 }
 
